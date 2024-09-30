@@ -1,0 +1,11 @@
+.featured{
+background: url(../../../../src/assets/home/featured.jpg);
+background-attachment: fixed;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
