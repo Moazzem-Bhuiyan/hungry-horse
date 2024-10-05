@@ -41,3 +41,12 @@
   transform: translate(-50%, -50%);
   color: black;
 }
+:root{
+  background-color: white;
+  color: black;
+}
+
+.stat:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

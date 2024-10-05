@@ -11,7 +11,7 @@ const Payment = () => {
     return (
         <div>
 
-            <section> <SectionTitle heading={'Payment pls'} subheading={'Whats Looking '}></SectionTitle></section>
+            <section className="mt-20"> <SectionTitle heading={'Payment pls'} subheading={'Whats Looking '}></SectionTitle></section>
 
             <div>
                 <Elements stripe={stripePromise}>

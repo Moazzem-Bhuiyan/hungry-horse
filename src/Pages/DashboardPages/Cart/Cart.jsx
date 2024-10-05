@@ -58,7 +58,7 @@ const Cart = () => {
                 <SectionTitle subheading={'My CART'} heading={' add more?'}></SectionTitle>
             </section> 
 
-            <div className='lg:flex justify-evenly uppercase rounded-md py-2 ml-7  md:ml-5'>
+            <div className='lg:flex justify-evenly uppercase rounded-md py-2 ml-5  md:ml-5'>
 
                 <h1 className='lg:text-4xl mt-10'>Items : {cart.length}</h1>
                 <h1 className='md:text-4xl'>Total Price: {totalPrice}</h1>
@@ -67,7 +67,7 @@ const Cart = () => {
            
            :
 
-           <button className='btn btn-primary '>Pay</button>
+           <button className='btn bg-green-400 text-black '>Pay</button>
            
            }
 
@@ -76,11 +76,11 @@ const Cart = () => {
 
             {/* table */}
 
-            <div className="md:overflow-x-auto lg:w-full w-[30%] ml-7 ">
+            <div className="md:overflow-x-auto lg:w-full w-[30%] ml-5 ">
   <table className="table md:ml-5 lg:w-full w-[30%] m-auto">
     {/* head */}
     <thead>
-      <tr className='bg-orange-400'>
+      <tr className='bg-orange-400 text-black'>
         <th>
           #
         </th>

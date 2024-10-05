@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-
 import useAxiossecure from '../../../hooks/useAxiossecure';
 import { FaUser } from 'react-icons/fa6';
 import { FaTrash } from 'react-icons/fa';
@@ -11,10 +10,7 @@ const AllUser = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-
-            // ponditi koresiiiii
-
-            const res = await axiosSecure.get('/users'); 
+            const res = await axiosSecure.get('/users');
             return res.data;
         }
     });
@@ -62,38 +58,45 @@ const AllUser = () => {
     };
 
     return (
-        <div className='lg:w-full w-[80%] '>
-            <div className='  mt-20'>
-               
-                <h1 className='text-3xl md:ml-10 my-2'>Total Users : {users.length}</h1>
+        <div className='lg:w-[80%] w-full mx-auto p-'>
+            <div className='text-center mt-10'>
+                <h1 className='text-2xl md:text-3xl font-bold my-5'>
+                    Total Users: {users.length}
+                </h1>
             </div>
 
-            <div className="overflow-x-auto md:ml-10 w-full m-auto">
-                <table className="table table-zebra">
+            <div className="overflow-x-auto mx-auto">
+                <table className="table table-zebra w-full">
                     <thead>
-                        <tr className='bg-orange-400'>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Action</th>
+                        <tr className='bg-orange-400 text-left text-black '>
+                            {/* <th className='px-4 py-2'>#</th> */}
+                            {/* <th className='px-4 py-2'>Name</th> */}
+                            <th className='px-4 py-2'>Email</th>
+                            <th className='px-4 py-2'>Role</th>
+                            <th className='px-4 py-2'>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {users.map((user, index) => (
-                            <tr key={user._id}>
-                                <th className='bg-slate-300'>{index + 1}</th>
-                                <td>{user.name}</td>
-                                <td>{user.email}</td>
-                                <td>
-                                    {user.role === 'admin' ? 'Admin' : 
-                                        <button onClick={() => handleMakeAdmin(user)}>
+                            <tr key={user._id} className="hover:bg-slate-200">
+                                {/* <td className='px-4 py-2 bg-slate-300'>{index + 1}</td> */}
+                                {/* <td className='px-4 py-2'>{user.name}</td> */}
+                                <td className='px-4 bg-white py-2'>{user.email}</td>
+                                <td className='px-4 bg-white py-2'>
+                                    {user.role === 'admin' ? 'Admin' :
+                                        <button
+                                            onClick={() => handleMakeAdmin(user)}
+                                            className="text-blue-500 hover:text-blue-700"
+                                        >
                                             <FaUser />
                                         </button>
                                     }
                                 </td>
-                                <td>
-                                    <button onClick={() => handleDelete(user)}>
+                                <td className='px-4  bg-white py-2'>
+                                    <button
+                                        onClick={() => handleDelete(user)}
+                                        className="text-red-500 bg-white hover:text-red-700"
+                                    >
                                         <FaTrash />
                                     </button>
                                 </td>

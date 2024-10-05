@@ -15,12 +15,12 @@ const DashBoard = () => {
 
     return (
 
-        <div className=" grid grid-cols-6">
+        <div className=" text-black grid grid-cols-6">
 
 
 <div className=" w-full col-span-1 bg-orange-400 h-screen hidden lg:block ">
             {/* sudebar  */}
-             <ul className="menu p-2">
+             <ul className="menu text-black p-2">
 
                 {
 
@@ -64,16 +64,16 @@ const DashBoard = () => {
   <input id="my-drawer" type="checkbox" className="drawer-toggle" />
   <div className="">
     {/* Page content here */}
-    <label htmlFor="my-drawer" className="btn bg-orange-400 drawer-button "> <IoMdMenu className=" text-2xl" /></label>
+    <label htmlFor="my-drawer" className="btn bg-orange-400 drawer-button "> <IoMdMenu className=" text-black text-2xl" /></label>
   </div>
   <div className="drawer-side">
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-    <ul className="menu bg-base-200 text-base-content min-h-full w-70">
+    <ul className="menu  min-h-full w-70">
       {/* Sidebar content here */}
 
       <div className=" w-full bg-orange-400 h-screen ">
             {/* sudebar  */}
-             <ul className="menu p-2">
+             <ul className="menu text-black p-2">
 
                 {
 

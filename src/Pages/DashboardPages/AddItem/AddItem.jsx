@@ -63,7 +63,7 @@ const AddItem = () => {
             <label htmlFor="recipe">Recepie Name</label>
             <input
               {...register("recepiename")}
-              className=" w-full p-1 rounded-lg outline-none border "
+              className=" w-full p-1 rounded-lg outline-none border bg-white "
               placeholder="Enter Your recipe name"
             />
           </div>
@@ -75,7 +75,7 @@ const AddItem = () => {
               <br />
               <select
                 {...register("category")}
-                className=" w-full p-1 rounded-lg outline-none border "
+                className=" w-full p-1 rounded-lg  bg-white outline-none border "
               >
                 <option value="salad">salad</option>
                 <option value="desert">desert</option>
@@ -90,7 +90,7 @@ const AddItem = () => {
               <label htmlFor="Price">Price*</label> <br />
               <input
                 {...register("price")}
-                className=" w-full p-1 rounded-lg outline-none border "
+                className=" w-full p-1 rounded-lg  bg-white outline-none border "
                 type="number"
                 id=""
               />
@@ -103,7 +103,7 @@ const AddItem = () => {
             <textarea
               {...register("recepiedetails")}
               placeholder="write your text"
-              className=" w-full border outline-none rounded-md p-1 h-[200px]"
+              className=" w-full border outline-none  bg-white rounded-md p-1 h-[200px]"
             ></textarea>
           </div>
 
@@ -111,7 +111,7 @@ const AddItem = () => {
             <input
               {...register("image")}
               type="file"
-              className="file-input file-input-bordered w-full max-w-xs"
+              className="file-input  bg-white file-input-bordered w-full max-w-xs"
             />
           </div>
 

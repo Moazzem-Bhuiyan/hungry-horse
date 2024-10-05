@@ -124,9 +124,9 @@ const CheckOutFom = () => {
           style: {
             base: {
               fontSize: '16px',
-              color: '#424770',
+              color: 'black',
               '::placeholder': {
-                color: '#aab7c4',
+                color: 'black',
               },
             },
             invalid: {
@@ -135,7 +135,7 @@ const CheckOutFom = () => {
           },
         }}
       />
-      <button className="btn btn-sm bg-green-300 mt-10 ml-10 px-10" type="submit" disabled={!stripe || ! clientSecter}>
+      <button className="btn btn-sm bg-green-300 mt-10 ml-10 text-black px-10" type="submit" disabled={!stripe || ! clientSecter}>
         Pay
       </button>
 

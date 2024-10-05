@@ -70,9 +70,9 @@ const SignUP = () => {
       <form  onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text  text-black">Name</span>
           </label>
-          <input type="text" {...register("name", { required: true })} placeholder="Name" name="name" className="input input-bordered"  />
+          <input type="text" {...register("name", { required: true })} placeholder="Name" name="name" className="input bg-white input-bordered"  />
 
           {errors.name && <span>Thisss field is required</span>}
 
@@ -80,17 +80,17 @@ const SignUP = () => {
       
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text text-black ">Email</span>
           </label>
-          <input type="email" {...register("email")} placeholder="email" className="input input-bordered" required />
+          <input type="email" {...register("email")} placeholder="email" className="input bg-white input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text  text-black">Password</span>
           </label>
-          <input type="password" {...register("password")} placeholder="password" className="input input-bordered" required />
+          <input type="password" {...register("password")} placeholder="password" className="input bg-white input-bordered" required />
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            <a href="#" className="label-text-alt link link-hover  text-black ">Forgot password?</a>
           </label>
           <p>Already have an account ? <Link to ='/login'><span className="text-blue-500">Go to login </span></Link> </p>
         </div>

@@ -39,7 +39,7 @@ const ChefFood = () => {
             <p className="text-center text-gray-400">{card.des}</p>
 
             <div className="flex justify-center">
-              <button className="w-1/2 my-3 bg-white shadow-2xl rounded-lg border-b-2 border-black hover:bg-gray-400 hover:text-white">
+              <button className=" md:w-1/2  my-3 bg-white shadow-2xl rounded-lg border-b-2 border-black hover:bg-gray-400 hover:text-white">
                 {" "}
                 Add To Cart{" "}
               </button>

@@ -8,40 +8,36 @@ const PaymentHistory = () => {
   const axiosSecure = useAxiosSecure();
 
   const { data: payment = [] } = useQuery({
-    queryKey: ["payment", user?.email], // Optional chaining
+    queryKey: ["payment", user?.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/payment/${user?.email}`);
       return res.data;
     },
-    enabled: !!user?.email, // Query only runs if user and user.email exist
+    enabled: !!user?.email,
   });
 
   return (
-    <div>
-      <h2 className="text-2xl py-10 font-semibold mt-10 md:ml-5">
+    <div className="">
+      <h2 className="text-2xl py-4 font-semibold mt-10">
         Total History: {payment.length}
       </h2>
 
-      <div className="md:overflow-x-auto lg:w-full lg:ml-10 w-[30%]">
-        <table className="table md:ml-10 w-[30% ">
+      <div className="overflow-x-auto">
+        <table className="table-auto w-full text-left">
           {/* head */}
-          <thead>
-            <tr className="bg-orange-400">
-              <th>#</th>
-              <th>Price</th>
-
-              {/* <th>TransectionId</th> */}
-              <th>status</th>
+          <thead className="bg-orange-400">
+            <tr>
+              <th className="px-4 py-2">#</th>
+              <th className="px-4 py-2">Price</th>
+              <th className="px-4 py-2">Status</th>
             </tr>
           </thead>
           <tbody>
             {payment.map((payment, index) => (
-              <tr key={payment._id} className="bg-base-200">
-                <th className="bg-slate-300">{index + 1}</th>
-                <td>{"$ " + payment.price}</td>
-
-                {/* <td className="">{payment.transectionId}</td> */}
-                <td>{payment.status}</td>
+              <tr key={payment._id} className="border-b">
+                <th className="px-4 py-2 bg-slate-300">{index + 1}</th>
+                <td className="px-4 py-2">${payment.price}</td>
+                <td className="px-4 py-2">{payment.status}</td>
               </tr>
             ))}
           </tbody>

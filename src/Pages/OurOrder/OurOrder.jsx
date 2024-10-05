@@ -24,7 +24,7 @@ const OurOrder = () => {
   return (
     <div>
       <div className="contact">
-        <div className="text  bg-black p-20 px-52 bg-opacity-60 space-y-5">
+        <div className="text  bg-black p-20 md:px-52 px-20 bg-opacity-60 space-y-5">
           <h1 className="text-4xl font-bold uppercase">our Order</h1>
           <p className=" uppercase">would you like to dry dish</p>
         </div>
