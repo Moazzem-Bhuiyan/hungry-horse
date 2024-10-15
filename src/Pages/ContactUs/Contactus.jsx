@@ -71,7 +71,7 @@ const Contactus = () => {
             {" "}
             <label htmlFor="Name">Name*</label> <br />
             <input
-              className="w-full p-1 rounded-lg outline-none border "
+              className="w-full p-1 rounded-lg outline-none border bg-white "
               type="text"
               name="name"
               id=""
@@ -83,7 +83,7 @@ const Contactus = () => {
             {" "}
             <label htmlFor="Name">Email*</label> <br />
             <input
-              className=" w-full p-1 rounded-lg outline-none border "
+              className=" w-full p-1 rounded-lg outline-none border  bg-white"
               type="email"
               name="name"
               id=""
@@ -96,7 +96,7 @@ const Contactus = () => {
           {" "}
           <label htmlFor="Phone">Phone*</label>
           <input
-            className=" w-full p-1 rounded-lg outline-none border "
+            className=" w-full p-1 rounded-lg outline-none border  bg-white "
             type="text"
             name="phone"
             id=""
@@ -111,7 +111,7 @@ const Contactus = () => {
             placeholder="write your text"
             name="messsage"
             id=""
-            className=" w-full border outline-none rounded-md p-1 h-[200px]"
+            className=" w-full  bg-white border outline-none rounded-md p-1 h-[200px]"
           ></textarea>
         </div>
 
